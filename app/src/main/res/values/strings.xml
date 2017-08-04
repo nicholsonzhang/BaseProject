@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BaseProject</string>
+    <string name="bar_news">资讯</string>
+    <string name="bar_weather">天气</string>
+    <string name="bar_movie">影视</string>
+    <string name="bar_mine">我的</string>
+</resources>
