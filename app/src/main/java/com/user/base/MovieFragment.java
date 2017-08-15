@@ -23,7 +23,6 @@ public class MovieFragment extends BaseFragment {
 
     @Override
     protected void initViews() {
-        Log.e("yyzhang","MovieFragment initViews");
         ImageLoaderClient.display(this,imageUril,mImageView);
 
     }

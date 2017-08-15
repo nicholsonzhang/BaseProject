@@ -22,6 +22,7 @@ public class ImageLoaderClient {
     }
     public static void display(Fragment fragment, String url, ImageView imageView,int defaultId) {
         GlideApp.with(fragment).load(url).fitCenter().placeholder(defaultId).into(imageView);
+        
     }
 
 }
