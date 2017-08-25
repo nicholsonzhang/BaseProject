@@ -9,7 +9,7 @@ import android.widget.ImageView;
  * 图片加载框架封装,使用glide
  */
 
-public class ImageLoaderClient {
+public class ImageLoader {
 
 
     public static void display(Context context, String url, ImageView imageView) {

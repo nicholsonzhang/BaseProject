@@ -1,9 +1,8 @@
 package com.user.base;
 
-import android.util.Log;
 import android.widget.ImageView;
 
-import com.user.base.imageloader.ImageLoaderClient;
+import com.user.base.imageloader.ImageLoader;
 
 import butterknife.BindView;
 
@@ -23,7 +22,7 @@ public class MovieFragment extends BaseFragment {
 
     @Override
     protected void initViews() {
-        ImageLoaderClient.display(this,imageUril,mImageView);
+        ImageLoader.display(this,imageUril,mImageView);
 
     }
 }
