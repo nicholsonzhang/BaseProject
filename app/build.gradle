@@ -9,14 +9,56 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
     }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk') && 'release'.equals(variant.buildType.name)) {
+                def apkFile = new File(outputFile.parent, "xx.apk")
+                output.outputFile = apkFile
+            } else {
+                def fileName = outputFile.name.replace(".apk", "-version${defaultConfig.versionName}-code${defaultConfig.versionCode}.apk")
+                def apkFile = new File(outputFile.parent, fileName)
+                output.outputFile = apkFile
+
+            }
+
+        }
+
+    }
+
+    productFlavors {
+        baidu {
+            buildConfigField('String', 'WEB_URL', '"www.baidu.com"')
+            resValue('string', 'welcome_flavor', '百度来了')
+        }
+    }
+//    compileOptions {
+//        encoding = 'utf-8'
+//        sourceCompatibility = JavaVersion.VERSION_1_8
+//        targetCompatibility = JavaVersion.VERSION_1_8
+//
+//    }
+    dexOptions {
+        javaMaxHeapSize '4g'//执行dx时分配的堆内存大小，解决dx时内存不足，默认是1g
+//        threadCount 6 //执行dx 使用的线程数，默认是4
+
+    }
+
+
 }
 
 dependencies {
@@ -30,6 +72,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.jakewharton:butterknife:8.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
     compile 'com.android.support:design:25.3.1'
@@ -41,6 +84,7 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.2'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-//    compile project(':annotation')
-//    annotationProcessor project(':annotation')
+    //    compile project(':annotation')
+    //    annotationProcessor project(':annotation')
 }
+
