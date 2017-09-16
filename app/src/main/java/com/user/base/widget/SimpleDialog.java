@@ -13,13 +13,10 @@ public class SimpleDialog  extends Dialog{
 
 
     public SimpleDialog(@NonNull Context context) {
-       this(context,0);
+        super(context);
     }
 
     public SimpleDialog(@NonNull Context context, @StyleRes int themeResId) {
         super(context, themeResId);
-
-
     }
-
 }
