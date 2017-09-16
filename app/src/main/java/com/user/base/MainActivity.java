@@ -2,7 +2,6 @@ package com.user.base;
 import android.support.v4.app.FragmentManager;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.user.base.imageloader.GlideApp;
 import com.user.base.widget.NoScrollViewPager;
 import butterknife.BindView;
 
