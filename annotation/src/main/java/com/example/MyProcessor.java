@@ -8,7 +8,6 @@ import com.squareup.javapoet.TypeSpec;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -22,7 +21,6 @@ import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
-import javax.tools.Diagnostic;
 
 /**
  * Created by user on 2017/8/14.
@@ -33,10 +31,13 @@ public class MyProcessor extends AbstractProcessor {
     private Messager mMessager;
     private Filer mFiler;
     @Override
-    public synchronized void init(ProcessingEnvironment processingEnvironment) {
-        super.init(processingEnvironment);
-        mMessager = processingEnvironment.getMessager();
-        mFiler = processingEnvironment.getFiler();
+    public synchronized void init(ProcessingEnvironment env) {
+        super.init(env);
+        mMessager = env.getMessager();
+        mFiler = env.getFiler();
+        env.getTypeUtils();//处理TypeMirror的工具类
+        env.getElementUtils();//处理Element的工具类
+
     }
 
     @Override
@@ -53,6 +54,7 @@ public class MyProcessor extends AbstractProcessor {
     private Set<Class<? extends Annotation>> getSupportedAnnotations(){
         Set<Class<? extends Annotation>> annotations = new LinkedHashSet<>();
         annotations.add(Auto.class);
+        annotations.add(Auto1.class);
 
         return annotations;
     }
@@ -71,7 +73,18 @@ public class MyProcessor extends AbstractProcessor {
 //                mMessager.printMessage(Diagnostic.Kind.ERROR,"printing:"+element.toString());
 //            }
 //        }
-        generateMethod();
+
+        for (TypeElement te:set){
+
+            for (Element element: env.getElementsAnnotatedWith(te)){
+                element.getEnclosedElements();//返回此元素直接封装的子元素集
+                element.getEnclosingElement();//返回封装此元素的最里层的元素
+
+            }
+        }
+
+
+//        generateMethod();
 
         return true;
     }
