@@ -2,6 +2,7 @@ package com.user.base.http;
 
 
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -18,6 +19,7 @@ public class RequestClient {
                 .baseUrl("")
                 .client(OkHttpClientFactory.getInstance().getClient())
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
         requestApi = retrofit.create(RequestApi.class);
@@ -34,9 +36,6 @@ public class RequestClient {
         return mRequestClient;
     }
 
-    public void login() {
-
-    }
 
 
 }
