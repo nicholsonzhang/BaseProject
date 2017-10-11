@@ -13,6 +13,6 @@ import retrofit2.http.Path;
 public interface RequestApi {
 
     @GET("user/{userId}")
-    Observable<UserInfo> getUserInfo(@Path("userId") String userId);
+    Observable<BaseResponse<UserInfo>> getUserInfo(@Path("userId") String userId);
 
 }

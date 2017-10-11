@@ -1,7 +1,12 @@
 package com.user.base;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.text.InputFilter;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import butterknife.BindView;
 
@@ -10,8 +15,8 @@ import butterknife.BindView;
  */
 
 public class WeatherFragment extends BaseFragment {
-    @BindView(R.id.edit)
-    EditText mEditText;
+    @BindView(R.id.test)
+    ImageView mImageView;
     @Override
     protected int getContentViewId() {
         return R.layout.f_weather;
@@ -20,7 +25,6 @@ public class WeatherFragment extends BaseFragment {
     @Override
     protected void initViews() {
 
-        mEditText.setFilters(new InputFilter[]{new TestFilter()});
 
     }
 
