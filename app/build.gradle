@@ -87,5 +87,6 @@ dependencies {
     //    annotationProcessor project(':annotation')
     compile 'io.reactivex.rxjava2:rxjava:2.1.4'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
 }
 
