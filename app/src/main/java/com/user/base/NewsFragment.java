@@ -1,5 +1,11 @@
 package com.user.base;
 
+import android.content.Intent;
+
+import com.user.base.news.QRCodeActivity;
+
+import butterknife.OnClick;
+
 /**
  * Created by user on 2017/8/2.
  */
@@ -17,10 +23,13 @@ public class NewsFragment extends BaseFragment {
     @Override
     protected void initViews() {
 
-
-
-
         
+    }
+
+    @OnClick(R.id.ic_qrcode)
+    void clickQRcodeScan(){
+        Intent intent = new Intent(getActivity(),QRCodeActivity.class);
+        startActivity(intent);
     }
 
 }
