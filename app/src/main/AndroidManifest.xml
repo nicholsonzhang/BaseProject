@@ -22,6 +22,7 @@
         <activity android:name=".mine.CustomizedCalendarActivity"/>
         <activity android:name=".mine.GoogleCalendarActivity"/>
         <activity android:name=".news.QRCodeActivity"/>
+        <activity android:name=".mine.TestFragmentActivity"/>
     </application>
 
 </manifest>

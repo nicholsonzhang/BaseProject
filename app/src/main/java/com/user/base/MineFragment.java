@@ -1,9 +1,11 @@
 package com.user.base;
 
 import android.content.Intent;
+import android.util.Log;
 
 import com.user.base.mine.CustomizedCalendarActivity;
 import com.user.base.mine.GoogleCalendarActivity;
+import com.user.base.mine.TestFragmentActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -33,5 +35,11 @@ public class MineFragment extends BaseFragment {
         Intent intent = new Intent(getActivity(),GoogleCalendarActivity.class);
         startActivity(intent);
     }
+    @OnClick(R.id.test_fragment)
+    void clickTestFragment(){
+        Intent intent = new Intent(getActivity(),TestFragmentActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -1,7 +1,14 @@
 package com.user.base;
 
+import android.animation.ObjectAnimator;
+import android.animation.TypeEvaluator;
 import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.PointF;
 import android.graphics.Rect;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.Button;
@@ -25,11 +32,7 @@ import butterknife.OnClick;
 
 public class MovieFragment extends BaseFragment {
 
-    @BindView(R.id.image)
-    ImageView mImage;
 
-    @BindView(R.id.image2)
-    ImageView mImage2;
 
 
     private String imageUril = "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2434998280,2186154073&fm=26&gp=0.jpg";
@@ -42,15 +45,11 @@ public class MovieFragment extends BaseFragment {
     protected void initViews() {
 
 
-        GlideApp.with(this).load(imageUril).transform(new GlideRoundTransform(getActivity())).into(mImage);
-        GlideApp.with(this).load(imageUril).transform(new GlideCircleTransform()).into(mImage2);
-
-
-
-
-
-
-
     }
 
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+
+    }
 }

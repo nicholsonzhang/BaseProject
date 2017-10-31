@@ -1,5 +1,7 @@
 package com.user.base.mine;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +31,12 @@ public class CustomizedCalendarActivity extends BaseActivity implements OnDateSe
     MaterialCalendarView mCalendarView;
     @BindView(R.id.current_date)
     TextView mCurrentDate;
+
+
+    @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+    }
 
     @Override
     protected int getContentViewId() {
@@ -63,7 +71,6 @@ public class CustomizedCalendarActivity extends BaseActivity implements OnDateSe
         mCalendarView.setTitleFormatter(new HeaderTitleFormatter(getResources().getStringArray(R.array.months)));
         mCalendarView.setWeekDayFormatter(new WeekFormatter(getResources().getStringArray(R.array.weeks)));
 
-
     }
 
     @Override
@@ -83,4 +90,7 @@ public class CustomizedCalendarActivity extends BaseActivity implements OnDateSe
         }
         return FORMATTER.format(date.getDate());
     }
+
+
+
 }
