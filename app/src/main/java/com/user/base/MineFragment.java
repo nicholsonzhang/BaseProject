@@ -1,9 +1,12 @@
 package com.user.base;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.DatePicker;
 
 import com.user.base.mine.CustomizedCalendarActivity;
+import com.user.base.mine.CustomizedDatePickerActivity;
 import com.user.base.mine.GoogleCalendarActivity;
 import com.user.base.mine.TestFragmentActivity;
 
@@ -41,5 +44,10 @@ public class MineFragment extends BaseFragment {
         startActivity(intent);
     }
 
+    @OnClick(R.id.date_picker)
+    void clickDatePicker(){
+        Intent intent = new Intent(getActivity(),CustomizedDatePickerActivity.class);
+        startActivity(intent);
+    }
 
 }

@@ -24,5 +24,11 @@
         android:layout_height="50dp"
         app:leftText="检查Fragment"
         app:rightIcon="@drawable/right"/>
+    <com.user.base.widget.HnTextView
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:leftText="自定义DatePicker"
+        app:rightIcon="@drawable/right"/>
 
 </LinearLayout>
