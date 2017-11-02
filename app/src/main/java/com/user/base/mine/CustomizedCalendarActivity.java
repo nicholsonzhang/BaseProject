@@ -45,6 +45,7 @@ public class CustomizedCalendarActivity extends BaseActivity implements OnDateSe
 
     @Override
     protected void initViews() {
+
         mCalendarView.setOnDateChangedListener(this);
         mCalendarView.setOnMonthChangedListener(this);
 //        mCalendarView.setShowOtherDates(MaterialCalendarView.SHOW_ALL);

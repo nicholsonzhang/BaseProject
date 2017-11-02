@@ -6,6 +6,7 @@ import android.widget.NumberPicker;
 
 import com.user.base.BaseActivity;
 import com.user.base.R;
+import com.user.base.widget.HnNumberPicker;
 
 import butterknife.BindView;
 
@@ -15,8 +16,12 @@ import butterknife.BindView;
 
 public class CustomizedDatePickerActivity extends BaseActivity {
 
-    @BindView(R.id.date_picker)
-    DatePicker mDatePicker;
+    @BindView(R.id.number_picker)
+    HnNumberPicker mHnNumberPicker;
+    @BindView(R.id.number_picker2)
+    HnNumberPicker mHnNumberPicker2;
+    @BindView(R.id.number_picker3)
+    HnNumberPicker mHnNumberPicker3;
     @Override
     protected int getContentViewId() {
         return R.layout.activity_customized_date_picker;
@@ -24,6 +29,19 @@ public class CustomizedDatePickerActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
+        mHnNumberPicker.setMaxValue(10);
+        mHnNumberPicker.setMinValue(1);
+        mHnNumberPicker.setValue(3);
+        mHnNumberPicker.setSelectionDividerColor(mHnNumberPicker);
+
+        mHnNumberPicker2.setMaxValue(10);
+        mHnNumberPicker2.setMinValue(1);
+        mHnNumberPicker2.setValue(4);
+
+        mHnNumberPicker3.setMaxValue(10);
+        mHnNumberPicker3.setMinValue(1);
+        mHnNumberPicker3.setValue(5);
+
 
 
     }

@@ -3,11 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <DatePicker
-        android:id="@+id/date_picker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:datePickerMode="spinner"></DatePicker>
+    android:orientation="horizontal">
+    <com.user.base.widget.HnNumberPicker
+        android:id="@+id/number_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.user.base.widget.HnNumberPicker
+        android:id="@+id/number_picker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.user.base.widget.HnNumberPicker
+        android:id="@+id/number_picker3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
