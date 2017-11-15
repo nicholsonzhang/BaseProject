@@ -11,16 +11,16 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.user.base.R;
+
 /**
  * Created by user on 2017/10/26.
  */
 
 public class TestBezierView extends View {
 
-    private Paint mPaint = new Paint();
-    private Paint mPaint2 = new Paint();
-    private Path mPath = new Path();
-
+    private Drawable mDrawable;
     public TestBezierView(Context context) {
         this(context, null);
     }
@@ -31,16 +31,7 @@ public class TestBezierView extends View {
 
     public TestBezierView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setStrokeWidth(5);
-        mPaint.setColor(Color.RED);
-
-        mPaint2.setAntiAlias(true);
-        mPaint2.setStyle(Paint.Style.FILL);
-        mPaint2.setStrokeWidth(5);
-        mPaint2.setColor(Color.BLUE);
-
+        mDrawable = getResources().getDrawable(R.drawable.aa);
     }
 
 
@@ -48,17 +39,8 @@ public class TestBezierView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-//       RectF rectF = new RectF(0,0,200,100);
-//        canvas.drawArc(rectF,0,90,false,mPaint);
-//        canvas.drawOval(rectF,mPaint);
 
-       canvas.drawRect(0,0,200,100,mPaint);
-        canvas.rotate(40);
-        canvas.drawRect(100,400,200,500,mPaint2);
-
-
-
-
-
+        mDrawable.setBounds(0,0,200,400);
+        mDrawable.draw(canvas);
     }
 }

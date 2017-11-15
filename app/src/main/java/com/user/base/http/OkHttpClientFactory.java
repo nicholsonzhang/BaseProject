@@ -44,6 +44,7 @@ public class OkHttpClientFactory {
         builder.connectTimeout(15, TimeUnit.SECONDS);
         builder.readTimeout(20,TimeUnit.SECONDS);
         builder.writeTimeout(20,TimeUnit.SECONDS);
+        builder.retryOnConnectionFailure(true);
 
 
         mClient = builder.build();

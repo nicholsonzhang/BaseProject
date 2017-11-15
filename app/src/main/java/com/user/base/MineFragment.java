@@ -8,6 +8,7 @@ import android.widget.DatePicker;
 import com.user.base.mine.CustomizedCalendarActivity;
 import com.user.base.mine.CustomizedDatePickerActivity;
 import com.user.base.mine.GoogleCalendarActivity;
+import com.user.base.mine.ScrollerActivity;
 import com.user.base.mine.TestFragmentActivity;
 
 import butterknife.BindView;
@@ -47,6 +48,11 @@ public class MineFragment extends BaseFragment {
     @OnClick(R.id.date_picker)
     void clickDatePicker(){
         Intent intent = new Intent(getActivity(),CustomizedDatePickerActivity.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.scroller_test)
+    void clickScroller(){
+        Intent intent = new Intent(getActivity(),ScrollerActivity.class);
         startActivity(intent);
     }
 

@@ -4,6 +4,8 @@
     
 <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -24,6 +26,7 @@
         <activity android:name=".news.QRCodeActivity"/>
         <activity android:name=".mine.TestFragmentActivity"/>
         <activity android:name=".mine.CustomizedDatePickerActivity"/>
+        <activity android:name=".mine.ScrollerActivity"/>
     </application>
 
 </manifest>

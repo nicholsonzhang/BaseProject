@@ -3,6 +3,8 @@ package com.user.base.mine;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
+import android.util.Log;
+import android.view.ViewConfiguration;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,6 +73,12 @@ public class CustomizedCalendarActivity extends BaseActivity implements OnDateSe
 //        mCalendarView.setDateTextAppearance(R.style.text_14_fc6a21);
         mCalendarView.setTitleFormatter(new HeaderTitleFormatter(getResources().getStringArray(R.array.months)));
         mCalendarView.setWeekDayFormatter(new WeekFormatter(getResources().getStringArray(R.array.weeks)));
+
+
+        ViewConfiguration configuration = ViewConfiguration.get(this);
+        int max = configuration.getScaledMaximumFlingVelocity();
+        int min = configuration.getScaledMinimumFlingVelocity();
+        Log.e("yyzhang","max="+max+"min="+min);
 
     }
 
