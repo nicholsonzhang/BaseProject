@@ -8,7 +8,8 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.support.annotation.NonNull;
 
-import com.base.library.imageloader.utils.DeviceUtil;
+
+import com.base.library.utils.DeviceUtils;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
@@ -23,7 +24,7 @@ public class GlideRoundTransform extends BitmapTransformation {
     private int radius;
 
     public GlideRoundTransform(Context context) {
-        radius = DeviceUtil.dp2px(context, 5);
+        radius = DeviceUtils.dp2px(context, 5);
     }
 
     @Override

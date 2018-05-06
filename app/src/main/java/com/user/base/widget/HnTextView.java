@@ -10,8 +10,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.base.library.utils.DeviceUtils;
 import com.user.base.R;
-import com.base.library.imageloader.utils.DeviceUtil;
+
 
 /**
  * Created by user on 2017/10/11.
@@ -84,8 +85,8 @@ public class HnTextView extends RelativeLayout {
     public HnTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mContext = context;
-        defaultTextSize = DeviceUtil.dp2px(mContext,17);
-        defaultMargin = DeviceUtil.dp2px(mContext,10);
+        defaultTextSize = DeviceUtils.dp2px(mContext,17);
+        defaultMargin = DeviceUtils.dp2px(mContext,10);
         initAttr(attrs);
         initView();
     }
@@ -109,7 +110,7 @@ public class HnTextView extends RelativeLayout {
         mCenterTextColor = a.getColor(R.styleable.HnTextView_centerTextColor,defaultTextColor);
 
         mDividerLineColor = a.getColor(R.styleable.HnTextView_dividerLineColor,defaultDividerLineColor);
-        mDividerLineHeight = a.getDimensionPixelSize(R.styleable.HnTextView_dividerLineHeight,DeviceUtil.dp2px(mContext,0.5f));
+        mDividerLineHeight = a.getDimensionPixelSize(R.styleable.HnTextView_dividerLineHeight,DeviceUtils.dp2px(mContext,0.5f));
         mDividerLineType = a.getInt(R.styleable.HnTextView_dividerLineType,defaultDividerLineType);
 
         mLeftIconHeight = a.getDimensionPixelSize(R.styleable.HnTextView_leftIconHeight,0);

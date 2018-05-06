@@ -1,4 +1,4 @@
-package com.base.library.imageloader.utils;
+package com.base.library.utils;
 
 import android.content.Context;
 
@@ -6,7 +6,7 @@ import android.content.Context;
  * Created by user on 2017/8/21.
  */
 
-public class DeviceUtil {
+public class DeviceUtils {
 
     public static int dp2px(Context context,float dp){
         float density = context.getResources().getDisplayMetrics().density;
