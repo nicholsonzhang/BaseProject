@@ -1,4 +1,4 @@
-package com.user.base.widget;
+package com.base.library.imageloader;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

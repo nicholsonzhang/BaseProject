@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.user.base.imageloader.ImageLoader;
+import com.base.library.imageloader.ImageLoader;
 import com.user.base.widget.SectionedRecyclerViewAdapter;
 
 /**

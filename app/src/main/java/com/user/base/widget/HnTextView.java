@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.user.base.R;
-import com.user.base.utils.DeviceUtil;
+import com.base.library.imageloader.utils.DeviceUtil;
 
 /**
  * Created by user on 2017/10/11.
