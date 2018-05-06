@@ -1,10 +1,11 @@
 package com.user.base.http;
 
-import com.user.base.UserInfo;
+import com.base.library.http.BaseResponseBody;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
+import retrofit2.http.Query;
+
 
 /**
  * Created by user on 2017/8/10.
@@ -12,7 +13,7 @@ import retrofit2.http.Path;
 
 public interface RequestApi {
 
-    @GET("user/{userId}")
-    Observable<BaseResponse<UserInfo>> getUserInfo(@Path("userId") String userId);
+    @GET("test/")
+    Observable<BaseResponseBody<String>> testInfo(@Query("key") String key);
 
 }

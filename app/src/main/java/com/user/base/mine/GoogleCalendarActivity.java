@@ -2,7 +2,7 @@ package com.user.base.mine;
 
 import android.widget.CalendarView;
 
-import com.user.base.BaseActivity;
+import com.user.base.base.BaseActivity;
 import com.user.base.R;
 
 import butterknife.BindView;

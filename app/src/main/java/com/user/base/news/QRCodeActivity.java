@@ -2,7 +2,7 @@ package com.user.base.news;
 
 import android.util.Log;
 
-import com.user.base.BaseActivity;
+import com.user.base.base.BaseActivity;
 import com.user.base.R;
 import com.yanzhenjie.zbar.camera.CameraPreview;
 import com.yanzhenjie.zbar.camera.ScanCallback;

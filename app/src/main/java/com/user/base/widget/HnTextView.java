@@ -127,7 +127,6 @@ public class HnTextView extends RelativeLayout {
         mCenterTextMarginLeft = a.getDimensionPixelSize(R.styleable.HnTextView_centerTextMarginLeft,0);
         mCenterTextMarginRight = a.getDimensionPixelSize(R.styleable.HnTextView_centerTextMarginRight,0);
         mBottomDividerLineMarginLeft = a.getDimensionPixelSize(R.styleable.HnTextView_bottomDividerLineMarginLeft,0);
-
         a.recycle();
     }
     private void initView(){

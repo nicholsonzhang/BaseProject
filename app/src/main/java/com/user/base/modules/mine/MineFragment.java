@@ -1,7 +1,9 @@
-package com.user.base;
+package com.user.base.modules.mine;
 
 import android.content.Intent;
 
+import com.user.base.base.BaseFragment;
+import com.user.base.R;
 import com.user.base.mine.CustomizedCalendarActivity;
 import com.user.base.mine.CustomizedDatePickerActivity;
 import com.user.base.mine.GoogleCalendarActivity;

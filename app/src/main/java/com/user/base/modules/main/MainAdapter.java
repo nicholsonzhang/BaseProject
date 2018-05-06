@@ -1,14 +1,13 @@
-package com.user.base;
+package com.user.base.modules.main;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.user.base.BaseFragment;
+import com.user.base.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;

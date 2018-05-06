@@ -2,13 +2,11 @@ package com.user.base.mine;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.view.ViewConfigurationCompat;
 import android.util.Log;
-import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.DatePicker;
 
-import com.user.base.BaseActivity;
+import com.user.base.base.BaseActivity;
 import com.user.base.R;
 import com.user.base.widget.HnNumberPicker;
 

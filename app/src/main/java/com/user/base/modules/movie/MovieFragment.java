@@ -1,5 +1,8 @@
-package com.user.base;
+package com.user.base.modules.movie;
 
+
+import com.user.base.base.BaseFragment;
+import com.user.base.R;
 
 /**
  * Created by user on 2017/8/2.

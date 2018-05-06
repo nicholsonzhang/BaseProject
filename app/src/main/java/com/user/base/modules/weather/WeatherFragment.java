@@ -1,12 +1,9 @@
-package com.user.base;
+package com.user.base.modules.weather;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.text.InputFilter;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.user.base.base.BaseFragment;
+import com.user.base.R;
 
 import butterknife.BindView;
 

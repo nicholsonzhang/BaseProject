@@ -4,7 +4,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
-import com.user.base.BaseActivity;
+import com.user.base.base.BaseActivity;
 import com.user.base.R;
 
 /**

@@ -1,7 +1,9 @@
-package com.user.base;
+package com.user.base.modules.news;
 
 import android.content.Intent;
 
+import com.user.base.base.BaseFragment;
+import com.user.base.R;
 import com.user.base.news.QRCodeActivity;
 
 import butterknife.OnClick;

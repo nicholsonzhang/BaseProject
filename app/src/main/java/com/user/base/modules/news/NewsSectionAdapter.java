@@ -1,4 +1,4 @@
-package com.user.base;
+package com.user.base.modules.news;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.base.library.imageloader.ImageLoader;
+import com.user.base.R;
+import com.user.base.modules.news.NewsHeaderViewHolder;
+import com.user.base.modules.news.NewsItemViewHolder;
 import com.user.base.widget.SectionedRecyclerViewAdapter;
 
 /**

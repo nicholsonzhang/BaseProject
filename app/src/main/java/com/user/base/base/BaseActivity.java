@@ -1,4 +1,4 @@
-package com.user.base;
+package com.user.base.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
