@@ -31,11 +31,6 @@
         app:leftText="自定义DatePicker"
         app:rightIcon="@drawable/right"/>
 
-    <com.user.base.widget.HnTextView
-        android:id="@+id/scroller_test"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="详解Scroller"
-        app:rightIcon="@drawable/right"/>
+
 
 </LinearLayout>

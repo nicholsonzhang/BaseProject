@@ -26,7 +26,6 @@
         <activity android:name=".news.QRCodeActivity"/>
         <activity android:name=".mine.TestFragmentActivity"/>
         <activity android:name=".mine.CustomizedDatePickerActivity"/>
-        <activity android:name=".mine.ScrollerActivity"/>
     </application>
 
 </manifest>
