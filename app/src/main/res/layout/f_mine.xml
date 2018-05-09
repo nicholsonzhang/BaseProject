@@ -1,56 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.user.base.widget.HnTextView
         android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:leftText="日历"
-        app:rightIcon="@drawable/right"/>
+        app:rightIcon="@drawable/right" />
 
     <com.user.base.widget.HnTextView
         android:id="@+id/calendar2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:leftText="google日历"
-        app:rightIcon="@drawable/right"/>
+        app:rightIcon="@drawable/right" />
+
     <com.user.base.widget.HnTextView
         android:id="@+id/test_fragment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:leftText="检查Fragment"
-        app:rightIcon="@drawable/right"/>
+        app:rightIcon="@drawable/right" />
+
     <com.user.base.widget.HnTextView
         android:id="@+id/date_picker"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:leftText="自定义DatePicker"
-        app:rightIcon="@drawable/right"/>
+        app:rightIcon="@drawable/right" />
 
-    <FrameLayout
+    <com.user.base.widget.HnTextView
+        android:id="@+id/test_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CommonTextView"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_vertical"
-            />
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:layout_gravity="right|center_vertical"
-            />
-    </FrameLayout>
-
+        app:leftText="自定义EditText"
+        app:rightIcon="@drawable/right" />
 
 
 </LinearLayout>

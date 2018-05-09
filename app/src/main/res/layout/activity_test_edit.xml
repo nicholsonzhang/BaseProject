@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/edittext_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入手机号" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="请输入手机号"
+        android:textCursorDrawable="@drawable/edit_text_cursor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="请输入手机号"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        android:textSize="14sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edit_text"
+        android:gravity="bottom"
+        android:hint="请输入手机号"
+        android:textCursorDrawable="@drawable/edit_text_cursor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edit_text"
+        android:drawableLeft="@drawable/icon_login_phone"
+        android:hint="请输入手机号"
+        android:textCursorDrawable="@drawable/edit_text_cursor" />
+
+    <com.user.base.widget.XEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icon_login_phone"
+        android:text="请输入手机号"
+        android:textSize="14sp" />
+    <com.user.base.widget.XEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icon_login_phone"
+        android:text="请输入手机号"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
