@@ -27,6 +27,7 @@
         <activity android:name=".mine.CustomizedDatePickerActivity"/>
         <activity android:name=".modules.mine.TestEditTextActivity"/>
         <activity android:name=".modules.mine.TestComponentActivity"/>
+        <activity android:name=".modules.mine.TestRecyclerViewActivity"/>
     </application>
 
 </manifest>

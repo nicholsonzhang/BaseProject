@@ -62,5 +62,11 @@ public class MineFragment extends BaseFragment {
         startActivity(intent);
     }
 
+    @OnClick(R.id.test_recycler_view)
+    void clickTestRV(){
+        Intent intent = new Intent(getActivity(), TestRecyclerViewActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -1,50 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <com.user.base.widget.HnTextView
-        android:id="@+id/calendar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="日历"
-        app:rightIcon="@drawable/right" />
-
-    <com.user.base.widget.HnTextView
-        android:id="@+id/calendar2"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="google日历"
-        app:rightIcon="@drawable/right" />
-
-    <com.user.base.widget.HnTextView
-        android:id="@+id/test_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="检查Fragment"
-        app:rightIcon="@drawable/right" />
-
-    <com.user.base.widget.HnTextView
-        android:id="@+id/date_picker"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="自定义DatePicker"
-        app:rightIcon="@drawable/right" />
-
-    <com.user.base.widget.HnTextView
-        android:id="@+id/test_edit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="自定义EditText"
-        app:rightIcon="@drawable/right" />
-    <com.user.base.widget.HnTextView
-        android:id="@+id/test_component"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftText="自定义Component"
-        app:rightIcon="@drawable/right" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-</LinearLayout>
+        <com.user.base.widget.HnTextView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="日历"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/calendar2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="google日历"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="检查Fragment"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="自定义DatePicker"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="自定义EditText"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_component"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="自定义Component"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="自定义RecyclerView"
+            app:rightIcon="@drawable/right" />
+
+    </LinearLayout>
+</ScrollView>
