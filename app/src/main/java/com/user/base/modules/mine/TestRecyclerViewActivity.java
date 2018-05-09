@@ -39,6 +39,10 @@ public class TestRecyclerViewActivity extends BaseActivity {
         TextView textView = new TextView(this);
         textView.setText("这是heade view");
         wrapper.addHeadView(textView);
+
+        TextView t2 = new TextView(this);
+        t2.setText("这是第二个headerview");
+        wrapper.addHeadView(t2);
     }
 
 }
