@@ -25,7 +25,7 @@
         <activity android:name=".news.QRCodeActivity"/>
         <activity android:name=".mine.TestFragmentActivity"/>
         <activity android:name=".mine.CustomizedDatePickerActivity"/>
-        <activity android:name=".modules.mine.TestEditText"/>
+        <activity android:name=".modules.mine.TestEditTextActivity"/>
         <activity android:name=".modules.mine.TestComponentActivity"/>
     </application>
 

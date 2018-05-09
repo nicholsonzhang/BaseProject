@@ -52,7 +52,7 @@ public class MineFragment extends BaseFragment {
 
     @OnClick(R.id.test_edit)
     void clickTestEdit() {
-        Intent intent = new Intent(getActivity(), TestEditText.class);
+        Intent intent = new Intent(getActivity(), TestEditTextActivity.class);
         startActivity(intent);
     }
 

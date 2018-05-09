@@ -1,6 +1,5 @@
 package com.user.base.modules.mine;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -8,9 +7,8 @@ import com.user.base.R;
 import com.user.base.base.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.OnFocusChange;
 
-public class TestEditText extends BaseActivity {
+public class TestEditTextActivity extends BaseActivity {
 
     @BindView(R.id.edittext_1)
     EditText editText1;
@@ -25,7 +23,6 @@ public class TestEditText extends BaseActivity {
         editText1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                Log.e("yyzhang","hasFocus="+hasFocus);
             }
         });
     }
