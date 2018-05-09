@@ -39,6 +39,12 @@
         android:layout_height="50dp"
         app:leftText="自定义EditText"
         app:rightIcon="@drawable/right" />
+    <com.user.base.widget.HnTextView
+        android:id="@+id/test_component"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:leftText="自定义Component"
+        app:rightIcon="@drawable/right" />
 
 
 </LinearLayout>

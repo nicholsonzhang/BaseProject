@@ -26,6 +26,7 @@
         <activity android:name=".mine.TestFragmentActivity"/>
         <activity android:name=".mine.CustomizedDatePickerActivity"/>
         <activity android:name=".modules.mine.TestEditText"/>
+        <activity android:name=".modules.mine.TestComponentActivity"/>
     </application>
 
 </manifest>

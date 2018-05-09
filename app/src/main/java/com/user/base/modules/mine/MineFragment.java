@@ -27,33 +27,40 @@ public class MineFragment extends BaseFragment {
     }
 
     @OnClick(R.id.calendar)
-    void clickCalendar(){
-        Intent intent = new Intent(getActivity(),CustomizedCalendarActivity.class);
+    void clickCalendar() {
+        Intent intent = new Intent(getActivity(), CustomizedCalendarActivity.class);
         startActivity(intent);
     }
+
     @OnClick(R.id.calendar2)
-    void clickCalendar2(){
-        Intent intent = new Intent(getActivity(),GoogleCalendarActivity.class);
+    void clickCalendar2() {
+        Intent intent = new Intent(getActivity(), GoogleCalendarActivity.class);
         startActivity(intent);
     }
+
     @OnClick(R.id.test_fragment)
-    void clickTestFragment(){
-        Intent intent = new Intent(getActivity(),TestFragmentActivity.class);
+    void clickTestFragment() {
+        Intent intent = new Intent(getActivity(), TestFragmentActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.date_picker)
-    void clickDatePicker(){
-        Intent intent = new Intent(getActivity(),CustomizedDatePickerActivity.class);
+    void clickDatePicker() {
+        Intent intent = new Intent(getActivity(), CustomizedDatePickerActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.test_edit)
-    void clickTestEdit(){
-        Intent intent = new Intent(getActivity(),TestEditText.class);
+    void clickTestEdit() {
+        Intent intent = new Intent(getActivity(), TestEditText.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.test_component)
+    void clickTestComponent() {
+        Intent intent = new Intent(getActivity(), TestComponentActivity.class);
+        startActivity(intent);
+    }
 
 
 }
