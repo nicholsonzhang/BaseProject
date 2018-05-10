@@ -1,7 +1,6 @@
 package com.and.framework.test;
 
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
+
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -9,30 +8,29 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class Test {
+public class TestCreate {
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
 
-        Observable observable = Observable.create(new ObservableOnSubscribe<String>() {
+
+        Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> emitter) {
+                emitter.onNext("hello");
+                emitter.onNext("world");
+                emitter.onComplete();
 
             }
-        });
-
-
-
-
-        observable.subscribe(new Observer() {
+        }).subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
 
             }
 
             @Override
-            public void onNext(Object o) {
-
+            public void onNext(String s) {
+                System.out.println("onNext=" + s);
             }
 
             @Override
@@ -42,12 +40,9 @@ public class Test {
 
             @Override
             public void onComplete() {
-
+                System.out.println("onComplete");
             }
         });
-
-
-
 
 
     }

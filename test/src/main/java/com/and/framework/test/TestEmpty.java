@@ -1,0 +1,37 @@
+package com.and.framework.test;
+
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+
+public class TestEmpty {
+    public static void main(String args[]){
+
+
+  Observable<String> observable = Observable.empty();
+  observable.subscribe(new Observer<String>() {
+      @Override
+      public void onSubscribe(Disposable d) {
+          System.out.println("onSubscribe");
+
+      }
+
+      @Override
+      public void onNext(String s) {
+          System.out.println("onNext");
+      }
+
+      @Override
+      public void onError(Throwable e) {
+          System.out.println("onError");
+
+      }
+
+      @Override
+      public void onComplete() {
+          System.out.println("onComplete");
+
+      }
+  });
+    }
+}
