@@ -1,9 +1,7 @@
 package com.user.base.modules.mine;
 
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.user.base.R;
@@ -17,7 +15,7 @@ public class TestRecyclerViewActivity extends BaseActivity {
     RecyclerView mRecyclerView;
 
     private TestRecyclerViewAdapter mAdapter;
-    RecyclerViewWrapper wrapper;
+    private RecyclerViewAdapterWrapper wrapper;
 
     @Override
     protected int getContentViewId() {
@@ -28,14 +26,14 @@ public class TestRecyclerViewActivity extends BaseActivity {
     protected void initViews() {
         mAdapter = new TestRecyclerViewAdapter(this);
         initHeaderView();
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         mRecyclerView.setAdapter(wrapper);
 
     }
 
     private void initHeaderView(){
-        wrapper = new RecyclerViewWrapper(mAdapter);
+        wrapper = new RecyclerViewAdapterWrapper(mAdapter);
         TextView textView = new TextView(this);
         textView.setText("这是heade view");
         wrapper.addHeadView(textView);
