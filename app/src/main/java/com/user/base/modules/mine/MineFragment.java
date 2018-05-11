@@ -9,6 +9,7 @@ import com.user.base.mine.CustomizedDatePickerActivity;
 import com.user.base.mine.GoogleCalendarActivity;
 import com.user.base.mine.TestFragmentActivity;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -63,10 +64,21 @@ public class MineFragment extends BaseFragment {
     }
 
     @OnClick(R.id.test_recycler_view)
-    void clickTestRV(){
+    void clickTestRV() {
         Intent intent = new Intent(getActivity(), TestRecyclerViewActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.test_web_view)
+    void clickWebView() {
+        Intent intent = new Intent(getActivity(), TestWebViewActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.test_pay)
+    void clickPay() {
+        Intent intent = new Intent(getActivity(), TestPayActivity.class);
+        startActivity(intent);
+    }
 
 }

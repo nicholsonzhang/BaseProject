@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.user.base">
-    
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
 
@@ -20,14 +20,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mine.CustomizedCalendarActivity"/>
-        <activity android:name=".mine.GoogleCalendarActivity"/>
-        <activity android:name=".news.QRCodeActivity"/>
-        <activity android:name=".mine.TestFragmentActivity"/>
-        <activity android:name=".mine.CustomizedDatePickerActivity"/>
-        <activity android:name=".modules.mine.TestEditTextActivity"/>
-        <activity android:name=".modules.mine.TestComponentActivity"/>
-        <activity android:name=".modules.mine.TestRecyclerViewActivity"/>
+        <activity android:name=".mine.CustomizedCalendarActivity" />
+        <activity android:name=".mine.GoogleCalendarActivity" />
+        <activity android:name=".news.QRCodeActivity" />
+        <activity android:name=".mine.TestFragmentActivity" />
+        <activity android:name=".mine.CustomizedDatePickerActivity" />
+        <activity android:name=".modules.mine.TestEditTextActivity" />
+        <activity android:name=".modules.mine.TestComponentActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="nichol" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".modules.mine.TestRecyclerViewActivity" />
+        <activity android:name=".modules.mine.TestWebViewActivity"/>
+        <activity android:name=".modules.mine.TestPayActivity"/>
     </application>
 
 </manifest>

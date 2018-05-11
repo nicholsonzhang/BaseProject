@@ -1,6 +1,7 @@
 package com.user.base.modules.mine;
 
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
@@ -9,6 +10,9 @@ import com.user.base.base.BaseActivity;
 
 import butterknife.BindView;
 
+/**
+ * 还需对装饰者完善
+ */
 public class TestRecyclerViewActivity extends BaseActivity {
 
     @BindView(R.id.recycler_view)
@@ -26,9 +30,9 @@ public class TestRecyclerViewActivity extends BaseActivity {
     protected void initViews() {
         mAdapter = new TestRecyclerViewAdapter(this);
         initHeaderView();
-//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        mRecyclerView.setAdapter(wrapper);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        mRecyclerView.setAdapter(mAdapter);
 
     }
 
