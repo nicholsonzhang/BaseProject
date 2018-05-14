@@ -1,5 +1,7 @@
 package com.user.base.widget;
 
+import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -10,19 +12,34 @@ import android.view.View;
 public class VerticalItemDecoration extends RecyclerView.ItemDecoration {
 
 
-
     private Drawable mDivider;
-    private int lefPadding,rightPadding;
+    private int lefPadding, rightPadding;
 
     private final Rect mBounds = new Rect();
+    private static final int[] ATTRS = new int[]{android.R.attr.listDivider};
 
+    public VerticalItemDecoration(Context context) {
+        TypedArray a = context.obtainStyledAttributes(ATTRS);
+        mDivider = a.getDrawable(0);//默认drawable
+        a.recycle();
+        if (mDivider == null) {
+            throw new IllegalArgumentException("Drawable cannot be null.");
+        }
+
+    }
+
+    /**
+     * 自定义drawable
+     * @param drawable
+     */
     public void setDrawable(@NonNull Drawable drawable) {
         if (drawable == null) {
             throw new IllegalArgumentException("Drawable cannot be null.");
         }
         mDivider = drawable;
     }
-    public void setpadding(int lefPadding,int rightPadding){
+
+    public void setpadding(int lefPadding, int rightPadding) {
         this.lefPadding = lefPadding;
         this.rightPadding = rightPadding;
     }
@@ -56,12 +73,11 @@ public class VerticalItemDecoration extends RecyclerView.ItemDecoration {
             parent.getDecoratedBoundsWithMargins(child, mBounds);
             final int bottom = mBounds.bottom + Math.round(child.getTranslationY());
             final int top = bottom - mDivider.getIntrinsicHeight();
-            mDivider.setBounds(left+lefPadding, top, right-rightPadding, bottom);
+            mDivider.setBounds(left + lefPadding, top, right - rightPadding, bottom);
             mDivider.draw(canvas);
         }
         canvas.restore();
     }
-
 
 
     @Override
