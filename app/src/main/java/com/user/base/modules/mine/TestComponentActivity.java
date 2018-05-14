@@ -2,13 +2,13 @@ package com.user.base.modules.mine;
 
 import android.widget.CompoundButton;
 
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
-import com.user.base.base.BaseActivity;
 import com.user.base.widget.CustomSwitch;
 
 import butterknife.BindView;
 
-public class TestComponentActivity extends BaseActivity{
+public class TestComponentActivity extends AppBaseActivity{
 
     @BindView(R.id.custom_switch)
     CustomSwitch mSwitch;

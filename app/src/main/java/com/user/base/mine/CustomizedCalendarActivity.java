@@ -11,7 +11,7 @@ import com.prolificinteractive.materialcalendarview.CalendarMode;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
-import com.user.base.base.BaseActivity;
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
 
 import java.text.DateFormat;
@@ -25,7 +25,7 @@ import butterknife.BindView;
  * 测试自定义日历控件
  */
 
-public class CustomizedCalendarActivity extends BaseActivity implements OnDateSelectedListener, OnMonthChangedListener{
+public class CustomizedCalendarActivity extends AppBaseActivity implements OnDateSelectedListener, OnMonthChangedListener{
     private static final DateFormat FORMATTER = SimpleDateFormat.getDateInstance();
     @BindView(R.id.calendar_view)
     MaterialCalendarView mCalendarView;

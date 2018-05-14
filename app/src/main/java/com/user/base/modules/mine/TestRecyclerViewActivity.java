@@ -1,19 +1,18 @@
 package com.user.base.modules.mine;
 
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
-import com.user.base.base.BaseActivity;
 
 import butterknife.BindView;
 
 /**
  * 还需对装饰者完善
  */
-public class TestRecyclerViewActivity extends BaseActivity {
+public class TestRecyclerViewActivity extends AppBaseActivity {
 
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;

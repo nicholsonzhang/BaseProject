@@ -2,7 +2,7 @@ package com.user.base.modules.main;
 import android.support.v4.app.FragmentManager;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.user.base.base.BaseActivity;
+import com.user.base.AppBaseActivity;
 import com.user.base.modules.mine.MineFragment;
 import com.user.base.modules.movie.MovieFragment;
 import com.user.base.modules.news.NewsFragment;
@@ -11,7 +11,7 @@ import com.user.base.modules.weather.WeatherFragment;
 import com.user.base.widget.NoScrollViewPager;
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppBaseActivity {
 
     @BindView(R.id.navigation_bar)
     BottomNavigationBar mBottomNavigationBar;

@@ -4,14 +4,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
-import com.user.base.base.BaseActivity;
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
 
 /**
  * Created by user on 2017/10/30.
  */
 
-public class TestFragmentActivity extends BaseActivity {
+public class TestFragmentActivity extends AppBaseActivity {
     private  FragmentManager mFragmentManager;
     @Override
     protected int getContentViewId() {

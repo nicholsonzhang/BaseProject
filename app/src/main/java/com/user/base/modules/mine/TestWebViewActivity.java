@@ -3,12 +3,12 @@ package com.user.base.modules.mine;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
-import com.user.base.base.BaseActivity;
 
 import butterknife.BindView;
 
-public class TestWebViewActivity extends BaseActivity {
+public class TestWebViewActivity extends AppBaseActivity {
     @BindView(R.id.web_view)
     WebView webView;
     @Override

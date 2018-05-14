@@ -2,6 +2,7 @@ package com.user.base.news;
 
 import android.util.Log;
 
+import com.user.base.AppBaseActivity;
 import com.user.base.base.BaseActivity;
 import com.user.base.R;
 import com.yanzhenjie.zbar.camera.CameraPreview;
@@ -13,7 +14,7 @@ import butterknife.BindView;
  * Created by user on 2017/10/24.
  */
 
-public class QRCodeActivity  extends BaseActivity{
+public class QRCodeActivity  extends AppBaseActivity{
     private static final String TAG =   QRCodeActivity.class.getName();
     @BindView(R.id.preview)
     CameraPreview mPreview;

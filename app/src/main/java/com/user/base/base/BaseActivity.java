@@ -10,7 +10,7 @@ import com.user.base.presenter.BaseView;
 import butterknife.ButterKnife;
 
 /**
- * Created by user on 2017/8/1.
+ * 公共基类，和业务无关的
  */
 
 public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity implements BaseView {

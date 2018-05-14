@@ -4,7 +4,7 @@ package com.user.base.presenter;
 public class BasePresenter<V extends BaseView> {
 
 
-    private V mvpView;
+    protected V mvpView;
 
 
     public void attachView(V mvpView) {

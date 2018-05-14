@@ -2,7 +2,7 @@ package com.user.base.modules.news;
 
 import android.content.Intent;
 
-import com.user.base.base.BaseFragment;
+import com.user.base.AppBaseFragment;
 import com.user.base.R;
 import com.user.base.news.QRCodeActivity;
 import com.user.base.presenter.MyPayPresenter;
@@ -15,7 +15,7 @@ import butterknife.OnClick;
  * Created by user on 2017/8/2.
  */
 
-public class NewsFragment extends BaseFragment<MyPayPresenter> implements MyPayView {
+public class NewsFragment extends AppBaseFragment<MyPayPresenter> implements MyPayView {
 
 
 

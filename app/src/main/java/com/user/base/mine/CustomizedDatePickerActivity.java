@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.ViewConfiguration;
 import android.widget.DatePicker;
 
-import com.user.base.base.BaseActivity;
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
 import com.user.base.widget.HnNumberPicker;
 
@@ -18,7 +18,7 @@ import butterknife.BindView;
  * Created by user on 2017/10/31.
  */
 
-public class CustomizedDatePickerActivity extends BaseActivity {
+public class CustomizedDatePickerActivity extends AppBaseActivity {
 
     @BindView(R.id.number_picker)
     HnNumberPicker mHnNumberPicker;

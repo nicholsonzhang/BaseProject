@@ -1,6 +1,7 @@
 package com.user.base.modules.mine;
 
 
+import com.user.base.AppBaseActivity;
 import com.user.base.R;
 import com.user.base.base.BaseActivity;
 import com.user.base.pay.PayApi;
@@ -13,7 +14,7 @@ import com.user.base.utils.ToastUtils;
 import butterknife.OnClick;
 
 
-public class TestPayActivity extends BaseActivity<MyPayPresenter> implements MyPayView {
+public class TestPayActivity extends AppBaseActivity<MyPayPresenter> implements MyPayView {
 
 
 
