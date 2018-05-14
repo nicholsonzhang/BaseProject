@@ -80,10 +80,4 @@ public class TestPayActivity extends BaseActivity<MyPayPresenter> implements MyP
         ToastUtils.show(this,message);
 
     }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mPresenter.detachView();
-    }
 }
