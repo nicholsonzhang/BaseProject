@@ -4,8 +4,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
+import com.base.library.utils.DeviceUtils;
 import com.user.base.AppBaseActivity;
 import com.user.base.R;
+import com.user.base.widget.MarginItemDecoration;
 
 import butterknife.BindView;
 
@@ -31,11 +33,13 @@ public class TestRecyclerViewActivity extends AppBaseActivity {
         initHeaderView();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        MarginItemDecoration itemDecoration = new MarginItemDecoration(0, 0, 0, DeviceUtils.dp2px(this, 10));
+        mRecyclerView.addItemDecoration(itemDecoration);
         mRecyclerView.setAdapter(mAdapter);
 
     }
 
-    private void initHeaderView(){
+    private void initHeaderView() {
         wrapper = new RecyclerViewAdapterWrapper(mAdapter);
         TextView textView = new TextView(this);
         textView.setText("这是heade view");
