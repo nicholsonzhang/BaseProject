@@ -11,6 +11,11 @@
         android:layout_height="wrap_content"
         android:text="支付宝"/>
 
-
+    <Button
+        android:id="@+id/btn_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信"
+        android:layout_marginTop="40dp"/>
 
 </LinearLayout>

@@ -1,8 +1,10 @@
 package com.user.base.pay;
 
 import android.app.Activity;
-
 import com.alipay.sdk.app.PayTask;
+import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import java.util.Map;
 
@@ -15,11 +17,26 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 public class PayApi {
+    private static volatile PayApi sInstance;
+    private IWXAPI iwxapi;
 
+    private PayApi(){
+
+    }
+    public static PayApi getInstance(){
+        if (sInstance == null){
+           synchronized (PayApi.class){
+               if (sInstance == null){
+                   sInstance = new PayApi();
+               }
+           }
+        }
+        return sInstance;
+    }
     /**
-     *payInfo是从服务端返回的，经过加签等操作的，以&连接的字符串
+     * payInfo是从服务端返回的，经过加签等操作的，以&连接的字符串
      */
-    public static void payAli(final Activity activity, final String payInfo, final OnPayListener payListener) {
+    public void payAli(final Activity activity, final String payInfo, final OnPayListener payListener) {
 
 
         Observable.create(new ObservableOnSubscribe<Map<String, String>>() {
@@ -74,8 +91,28 @@ public class PayApi {
     }
 
 
+    /**
+     * wxPayReq
+     * 此参数是服务端返回的，带有请求支付的各种信息
+     */
+    public void payWeChat(Activity activity, WXPayReq wxPayReq) {
+        iwxapi = WXAPIFactory.createWXAPI(activity, null);
+        iwxapi.registerApp(wxPayReq.getAppId());
 
+        PayReq payReq = new PayReq();
+        payReq.appId = wxPayReq.getAppId();
+        payReq.partnerId = wxPayReq.getPartnerId();
+        payReq.prepayId = wxPayReq.getPrepayId();
+        payReq.nonceStr = wxPayReq.getNonceStr();
+        payReq.timeStamp = wxPayReq.getTimeStamp();
+        payReq.packageValue = wxPayReq.getPackageValue();
+        payReq.sign = wxPayReq.getSign();
+        iwxapi.sendReq(payReq);
+    }
 
+    public IWXAPI getIWXAPI(){
+        return iwxapi;
+    }
 
     public interface OnPayListener {
         void paySuccess(String success);
