@@ -13,9 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".modules.main.MainActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask">
+        <activity
+            android:name=".modules.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,9 @@
         <activity android:name=".mine.TestFragmentActivity" />
         <activity android:name=".mine.CustomizedDatePickerActivity" />
         <activity android:name=".modules.mine.TestEditTextActivity" />
-        <activity android:name=".modules.mine.TestComponentActivity">
+        <activity
+            android:name=".modules.mine.TestComponentActivity"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

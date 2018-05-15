@@ -7,6 +7,9 @@ import com.base.library.utils.DeviceUtils;
 import com.user.base.widget.BaseDialogFragment;
 import com.user.base.R;
 
+/**
+ * 用于测试BaseDialogFragment
+ */
 public class MyDialogFragment extends BaseDialogFragment {
     @Override
     public int getLayoutId() {

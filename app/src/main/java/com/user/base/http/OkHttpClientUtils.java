@@ -2,6 +2,8 @@ package com.user.base.http;
 
 import android.support.annotation.Nullable;
 
+import com.base.library.ProgressResponseBody;
+import com.base.library.listener.OnProgressListener;
 import com.user.base.BuildConfig;
 
 import java.io.IOException;
@@ -26,25 +28,33 @@ import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
  * Created by user on 2017/8/11.
- *
  */
 
 public class OkHttpClientUtils {
     private static volatile OkHttpClientUtils sInstance;
-    private OkHttpClientUtils(){
+
+    private OkHttpClientUtils() {
     }
 
-    public static OkHttpClientUtils getInstance(){
-        if (sInstance == null){
-            synchronized (OkHttpClientUtils.class){
-                if (sInstance == null){
+    public static OkHttpClientUtils getInstance() {
+        if (sInstance == null) {
+            synchronized (OkHttpClientUtils.class) {
+                if (sInstance == null) {
                     sInstance = new OkHttpClientUtils();
                 }
             }
         }
         return sInstance;
     }
-    public OkHttpClient getClient(@Nullable InputStream cert) {
+
+    /**
+     * cert 为证书
+     * progressListener 为response下载进度，用于有显示下载进度的，其他的情况，此值为空
+     * @param cert
+     * @param progressListener
+     * @return
+     */
+    public OkHttpClient getClient(@Nullable InputStream cert, @Nullable final OnProgressListener progressListener) {
 
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         if (BuildConfig.DEBUG) {
@@ -61,11 +71,10 @@ public class OkHttpClientUtils {
                         .method(originalRequest.method(), originalRequest.body())
                         .header("token", "custom get token")
                         .build();
-//                Response originalResponse = chain.proceed(request);
-//                return originalResponse.newBuilder()
-//                        .body(new ProgressResponseBody(originalResponse.body(),mProgressResponseListener))
-//                        .build();
-                return chain.proceed(request);
+                Response originalResponse = chain.proceed(request);
+                return originalResponse.newBuilder()
+                        .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                        .build();
             }
         };
 

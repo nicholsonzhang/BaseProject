@@ -28,5 +28,12 @@
             android:layout_height="wrap_content"
             android:text="显示dialog"/>
 
+        <Button
+            android:id="@+id/show_upgrade_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示升级dialog"
+            android:layout_marginTop="20dp"/>
+
     </LinearLayout>
 </ScrollView>
