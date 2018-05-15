@@ -10,7 +10,7 @@
 
     <!--自定义的DialogFragment的theme-->
     <style name="DialogFragment_Theme_1" parent="AppTheme">
-        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowBackground">@drawable/bg_base_dialog_fragment</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowFrame">@null</item>

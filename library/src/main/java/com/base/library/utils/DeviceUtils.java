@@ -1,6 +1,7 @@
 package com.base.library.utils;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 
 /**
  * Created by user on 2017/8/21.
@@ -26,5 +27,15 @@ public class DeviceUtils {
     public static int sp2px(Context context, float sp) {
         final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
         return (int) (sp * fontScale + 0.5f);
+    }
+
+    public static int getScreenHeight(Context context) {
+        DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        return dm.heightPixels;
+    }
+
+    public static int getScreenWidth(Context context) {
+        DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        return dm.widthPixels;
     }
 }

@@ -3,6 +3,7 @@ package com.user.base.modules.mine;
 import android.view.Gravity;
 import android.view.View;
 
+import com.base.library.utils.DeviceUtils;
 import com.user.base.widget.BaseDialogFragment;
 import com.user.base.R;
 
@@ -24,7 +25,15 @@ public class MyDialogFragment extends BaseDialogFragment {
 
 
     @Override
-    protected int setDialogLocation() {
-        return Gravity.BOTTOM;
+    protected int getDialogLocation() {
+        return Gravity.CENTER;
+    }
+
+
+    @Override
+    protected int getDialogWidth() {
+        int width = DeviceUtils.getScreenWidth(getActivity());
+
+        return (int) (width * 0.8);
     }
 }

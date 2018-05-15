@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import butterknife.ButterKnife;
+
 import com.user.base.R;
 
 /**
@@ -42,8 +43,8 @@ public abstract class BaseDialogFragment extends AppCompatDialogFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         initData();
         initDialog();
     }
@@ -53,7 +54,7 @@ public abstract class BaseDialogFragment extends AppCompatDialogFragment {
         this.getDialog().setCanceledOnTouchOutside(cancelable());
         Window window = this.getDialog().getWindow();
         WindowManager.LayoutParams lp = window.getAttributes();
-        lp.gravity = setDialogLocation();
+        lp.gravity = getDialogLocation();
         lp.width = getDialogWidth();
         lp.height = getDialogHeight();
         window.setAttributes(lp);
@@ -63,7 +64,9 @@ public abstract class BaseDialogFragment extends AppCompatDialogFragment {
     public abstract int getLayoutId();
 
     public abstract void initView(View view);
+
     public abstract void initData();
+
     /**
      * 点击dialog外能否是dialog消失
      */
@@ -74,14 +77,14 @@ public abstract class BaseDialogFragment extends AppCompatDialogFragment {
     /**
      * 设置dialog在屏幕的位置，Gravity
      */
-    protected int setDialogLocation(){
+    protected int getDialogLocation() {
         return Gravity.CENTER;
     }
 
     /**
-     * 自定义theme，默认0，可以在子类中修改
+     * 自定义theme,可以在子类中修改
      */
-    protected int initTheme(){
+    protected int initTheme() {
         return THEME_1;
     }
 
