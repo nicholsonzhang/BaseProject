@@ -7,6 +7,7 @@ import com.user.base.R;
 import com.user.base.widget.CustomSwitch;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class TestComponentActivity extends AppBaseActivity{
 
@@ -25,5 +26,12 @@ public class TestComponentActivity extends AppBaseActivity{
             }
         });
 
+    }
+
+
+    @OnClick(R.id.showdialog)
+    void showDialog(){
+        MyDialogFragment dialogFragment = new MyDialogFragment();
+        dialogFragment.show(getSupportFragmentManager(),"my_dialog_fragment");
     }
 }

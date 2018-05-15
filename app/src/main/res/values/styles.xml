@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--自定义的DialogFragment的theme-->
+    <style name="DialogFragment_Theme_1" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>
