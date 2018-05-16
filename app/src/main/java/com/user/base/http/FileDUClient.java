@@ -22,20 +22,21 @@ public class FileDUClient {
     private static volatile FileDUClient sInstance;
 
     private FileDUService fileDUService;
-    private FileDUClient(){
+
+    private FileDUClient() {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(OkHttpClientUtils.getInstance().getClient(null, null))
                 .baseUrl("http://wwww.baidu.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
-        fileDUService =retrofit.create(FileDUService.class);
+        fileDUService = retrofit.create(FileDUService.class);
     }
 
-    public static FileDUClient getInstance(){
-        if (sInstance == null){
-            synchronized (FileDUClient.class){
-                if(sInstance == null){
+    public static FileDUClient getInstance() {
+        if (sInstance == null) {
+            synchronized (FileDUClient.class) {
+                if (sInstance == null) {
                     sInstance = new FileDUClient();
                 }
             }
@@ -44,7 +45,8 @@ public class FileDUClient {
     }
 
 
-    public void downloadFile(String downloadUrl, final File savedFile, final OnProgressListener onProgressListener){
+    public void downloadFile(String downloadUrl, final File savedFile, final OnProgressListener onProgressListener) {
+        if (savedFile == null) return;
 
         Retrofit retrofit = new Retrofit.Builder()
                 .client(OkHttpClientUtils.getInstance().getClient(null, onProgressListener))
@@ -52,13 +54,13 @@ public class FileDUClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
-        FileDUService fileDUService =retrofit.create(FileDUService.class);
+        FileDUService fileDUService = retrofit.create(FileDUService.class);
 
         fileDUService.downloadFile(downloadUrl)
                 .doOnNext(new Consumer<ResponseBody>() {
                     @Override
                     public void accept(ResponseBody responseBody) throws Exception {
-                        FileUtils.writeToFile(responseBody.byteStream(),savedFile);
+                        FileUtils.writeToFile(responseBody.byteStream(), savedFile);
                     }
                 })
                 .subscribeOn(Schedulers.io())
@@ -66,12 +68,13 @@ public class FileDUClient {
                 .subscribe(new Observer<ResponseBody>() {
                     @Override
                     public void onSubscribe(Disposable d) {
+                        Log.e("yyzhang","onSubscribe");
 
                     }
 
                     @Override
                     public void onNext(ResponseBody responseBody) {
-
+                    Log.e("yyzhang","onNext");
                     }
 
                     @Override
@@ -81,8 +84,10 @@ public class FileDUClient {
 
                     @Override
                     public void onComplete() {
-                        if (onProgressListener != null){
-                            onProgressListener.onComplete();
+                        Log.e("yyzhang","onComplete");
+
+                        if (onProgressListener != null) {
+                            onProgressListener.onComplete(null);
                         }
 
 

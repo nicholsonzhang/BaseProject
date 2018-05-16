@@ -1,6 +1,5 @@
 package com.user.base.widget;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -12,18 +11,13 @@ import com.user.base.http.FileDUClient;
 import com.user.base.utils.FileUtils;
 import com.user.base.utils.ToastUtils;
 
-import java.util.concurrent.TimeUnit;
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
+
 
 public class UpgradeDialog extends BaseDialogFragment {
-
 
     @BindView(R.id.upgrade_content)
     TextView upgradeContent;
@@ -31,7 +25,7 @@ public class UpgradeDialog extends BaseDialogFragment {
     ProgressBar mProgressBar;
     private String url = "http://e.hiphotos.baidu.com/image/pic/item/aa18972bd40735fa324a79d792510fb30f240821.jpg";
 
-
+    private static final String APK_NAME="TuiSha.apk";
     private OnAppUpgradeListener mListener;
 
     @Override
@@ -79,7 +73,7 @@ public class UpgradeDialog extends BaseDialogFragment {
 
 
 
-        FileDUClient.getInstance().downloadFile(url, FileUtils.getApkPath(getActivity(), "x.jpg"), new OnProgressListener() {
+        FileDUClient.getInstance().downloadFile(url, FileUtils.getApkPath(getActivity(), APK_NAME), new OnProgressListener() {
             @Override
             public void onProgress(long progress, long total, boolean done) {
                 int current = (int)(progress/total*100);
@@ -87,7 +81,7 @@ public class UpgradeDialog extends BaseDialogFragment {
             }
 
             @Override
-            public void onComplete() {
+            public void onComplete(File outFile) {
                 ToastUtils.show(getActivity(),"下载完成");
 //                dismiss();
 

@@ -1,6 +1,10 @@
 package com.user.base.utils;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
+import android.support.v4.content.FileProvider;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -50,11 +54,40 @@ public class FileUtils {
         }
     }
 
-
     public static File getApkPath(Context context, String fileName) {
-        File cacheFileDir = context.getExternalCacheDir();
-        File apkFile = new File(cacheFileDir, fileName);
-        return apkFile;
 
+        File externalCacheDir = context.getExternalCacheDir();
+        File apkDir = new File(externalCacheDir,"apk");
+        if(!apkDir.exists()){
+            apkDir.mkdirs();
+        }
+
+        try {
+            File apkFile = new File(apkDir, fileName);
+            if (apkFile.exists()) {
+                apkFile.delete();
+            } else {
+                apkFile.createNewFile();
+            }
+            return apkFile;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+
+    public static void installApk(Context context, File apkFile) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Uri uri = FileProvider.getUriForFile(context, "com.user.base.fileprovider", apkFile);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.setDataAndType(uri, "application/vnd.android.package-archive");
+        } else {
+            intent.setDataAndType(Uri.fromFile(apkFile), "application/vnd.android.package-archive");
+        }
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 }
