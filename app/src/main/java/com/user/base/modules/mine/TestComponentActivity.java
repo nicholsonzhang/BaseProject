@@ -4,9 +4,12 @@ import android.widget.CompoundButton;
 
 import com.user.base.AppBaseActivity;
 import com.user.base.R;
+import com.user.base.utils.FileUtils;
 import com.user.base.utils.ToastUtils;
 import com.user.base.widget.CustomSwitch;
 import com.user.base.widget.UpgradeDialog;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -15,6 +18,7 @@ public class TestComponentActivity extends AppBaseActivity {
 
     @BindView(R.id.custom_switch)
     CustomSwitch mSwitch;
+    private UpgradeDialog upgradeDialog;
 
     @Override
     protected int getContentViewId() {
@@ -40,8 +44,10 @@ public class TestComponentActivity extends AppBaseActivity {
 
     @OnClick(R.id.show_upgrade_dialog)
     void clickUpgreade() {
-        UpgradeDialog upgradeDialog = new UpgradeDialog();
-        upgradeDialog.setOnAppUpgradeListener(onAppUpgradelistener);
+        if (upgradeDialog == null) {
+            upgradeDialog = new UpgradeDialog();
+            upgradeDialog.setOnAppUpgradeListener(onAppUpgradelistener);
+        }
         upgradeDialog.show(getSupportFragmentManager(), "app_upgrade_dialog");
 
     }
@@ -49,13 +55,16 @@ public class TestComponentActivity extends AppBaseActivity {
     private UpgradeDialog.OnAppUpgradeListener onAppUpgradelistener = new UpgradeDialog.OnAppUpgradeListener() {
         @Override
         public void onCancel() {
-            ToastUtils.show(TestComponentActivity.this, "点击了稍后更新");
+            upgradeDialog.dismiss();
 
         }
 
         @Override
-        public void onUpgrade() {
-            ToastUtils.show(TestComponentActivity.this, "点击了立即更新");
+        public void onUpgrade(File apkFile) {
+
+            upgradeDialog.dismiss();
+            ToastUtils.show(TestComponentActivity.this,"下载完成,开始安装....."+apkFile.getName());
+            FileUtils.installApk(TestComponentActivity.this,apkFile);
 
         }
     };

@@ -1,5 +1,6 @@
 package com.user.base.widget;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -9,7 +10,6 @@ import com.base.library.utils.DeviceUtils;
 import com.user.base.R;
 import com.user.base.http.FileDUClient;
 import com.user.base.utils.FileUtils;
-import com.user.base.utils.ToastUtils;
 
 import java.io.File;
 
@@ -23,9 +23,12 @@ public class UpgradeDialog extends BaseDialogFragment {
     TextView upgradeContent;
     @BindView(R.id.progress)
     ProgressBar mProgressBar;
+    @BindView(R.id.layout_btn)
+    View layoutbtn;
     private String url = "http://e.hiphotos.baidu.com/image/pic/item/aa18972bd40735fa324a79d792510fb30f240821.jpg";
+    private String apkUrl = "http://sqdd.myapp.com/myapp/qqteam/tim/down/tim.apk";
 
-    private static final String APK_NAME="TuiSha.apk";
+    private static final String APK_NAME="tim.apk";
     private OnAppUpgradeListener mListener;
 
     @Override
@@ -56,8 +59,6 @@ public class UpgradeDialog extends BaseDialogFragment {
 
     @OnClick(R.id.cancel)
     void cancelUpgrade() {
-        this.dismiss();
-
         if (mListener != null) {
             mListener.onCancel();
         }
@@ -65,25 +66,25 @@ public class UpgradeDialog extends BaseDialogFragment {
 
     @OnClick(R.id.upgrade)
     void upgrade() {
-        if (mListener != null) {
-            mListener.onUpgrade();
-        }
         upgradeContent.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.VISIBLE);
 
+        layoutbtn.setVisibility(View.GONE);
 
-
-        FileDUClient.getInstance().downloadFile(url, FileUtils.getApkPath(getActivity(), APK_NAME), new OnProgressListener() {
+        FileDUClient.getInstance().downloadFile(apkUrl, FileUtils.getApkPath(getActivity(), APK_NAME), new OnProgressListener() {
             @Override
             public void onProgress(long progress, long total, boolean done) {
-                int current = (int)(progress/total*100);
+                int current = (int)((float)progress/total*100);
                 mProgressBar.setProgress(current);
             }
 
             @Override
             public void onComplete(File outFile) {
-                ToastUtils.show(getActivity(),"下载完成");
-//                dismiss();
+                if (mListener != null) {
+                    mListener.onUpgrade(outFile);
+                }
+
+
 
             }
         });
@@ -103,7 +104,7 @@ public class UpgradeDialog extends BaseDialogFragment {
 
         void onCancel();
 
-        void onUpgrade();
+        void onUpgrade(File apkFile);
 
     }
 

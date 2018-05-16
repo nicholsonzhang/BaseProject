@@ -87,7 +87,7 @@ public class FileDUClient {
                         Log.e("yyzhang","onComplete");
 
                         if (onProgressListener != null) {
-                            onProgressListener.onComplete(null);
+                            onProgressListener.onComplete(savedFile);
                         }
 
 
