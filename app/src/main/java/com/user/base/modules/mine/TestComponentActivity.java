@@ -36,7 +36,7 @@ public class TestComponentActivity extends AppBaseActivity {
     }
 
 
-    @OnClick(R.id.showdialog)
+    @OnClick(R.id.show_dialog)
     void showDialog() {
         MyDialogFragment dialogFragment = new MyDialogFragment();
         dialogFragment.show(getSupportFragmentManager(), "my_dialog_fragment");
