@@ -31,6 +31,7 @@
         <activity android:name=".modules.mine.TestEditTextActivity" />
         <activity
             android:name=".modules.mine.TestComponentActivity"
+            android:theme="@style/CustomStyle"
             android:screenOrientation="portrait">
 
             <intent-filter>

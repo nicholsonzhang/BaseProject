@@ -1,5 +1,6 @@
 package com.user.base.modules.mine;
 
+
 import android.widget.CompoundButton;
 
 import com.user.base.AppBaseActivity;
@@ -27,6 +28,7 @@ public class TestComponentActivity extends AppBaseActivity {
 
     @Override
     protected void initViews() {
+
         mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

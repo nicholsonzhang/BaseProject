@@ -9,6 +9,10 @@ import android.support.multidex.MultiDex;
  */
 
 public class MyApplication extends Application {
+
+
+    private static MyApplication sInstance;
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -19,6 +23,11 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        sInstance = this;
+    }
 
+
+    public static MyApplication getApplication() {
+        return sInstance;
     }
 }
