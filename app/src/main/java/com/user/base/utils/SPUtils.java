@@ -5,21 +5,25 @@ import android.content.SharedPreferences;
 
 import com.user.base.MyApplication;
 
-public class SharedPreferencesUtils {
+/**
+ * SharedPreference 工具类
+ */
+
+public class SPUtils {
     private static final String FILE_NAME = "app_info";
-    private static volatile SharedPreferencesUtils sInstance;
+    private static volatile SPUtils sInstance;
     private SharedPreferences preferences;
 
-    private SharedPreferencesUtils() {
+    private SPUtils() {
         preferences = MyApplication.getApplication().getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
 
     }
 
-    public static SharedPreferencesUtils getInstance() {
+    public static SPUtils getInstance() {
         if (sInstance == null) {
-            synchronized (SharedPreferencesUtils.class) {
+            synchronized (SPUtils.class) {
                 if (sInstance == null) {
-                    sInstance = new SharedPreferencesUtils();
+                    sInstance = new SPUtils();
                 }
             }
         }
