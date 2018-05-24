@@ -47,6 +47,7 @@
         <activity android:name=".modules.mine.TestRecyclerViewActivity" />
         <activity android:name=".modules.mine.TestWebViewActivity" />
         <activity android:name=".modules.mine.TestPayActivity" />
+        <activity android:name=".modules.mine.TestWheelViewActivity"/>
         <activity
             android:name=".wxapi.WXPayEntryActivity"
             android:exported="true"

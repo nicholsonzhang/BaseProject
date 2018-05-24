@@ -13,6 +13,7 @@ import com.user.base.mine.TestFragmentActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import retrofit2.http.Query;
 
 /**
  * Created by user on 2017/8/2.
@@ -80,6 +81,12 @@ public class MineFragment extends AppBaseFragment {
     @OnClick(R.id.test_pay)
     void clickPay() {
         Intent intent = new Intent(getActivity(), TestPayActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.test_wheel_view)
+    void clickWheelView(){
+        Intent intent = new Intent(getActivity(), TestWheelViewActivity.class);
         startActivity(intent);
     }
 

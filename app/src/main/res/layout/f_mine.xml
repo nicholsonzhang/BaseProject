@@ -71,5 +71,12 @@
             app:leftText="检查支付"
             app:rightIcon="@drawable/right" />
 
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_wheel_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="检查WheelView"
+            app:rightIcon="@drawable/right" />
+
     </LinearLayout>
 </ScrollView>
