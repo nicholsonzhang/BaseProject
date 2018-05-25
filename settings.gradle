@@ -1,2 +1,2 @@
-include ':app', ':library', ':test'
+include ':app', ':library', ':test', ':ui'
 include ':annotation'
