@@ -22,7 +22,6 @@ public class FileUtils {
             } else {
                 outFile.createNewFile();
             }
-
             fileOutputStream = new FileOutputStream(outFile);
             byte[] buffer = new byte[1024];
             int read;
