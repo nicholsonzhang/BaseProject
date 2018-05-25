@@ -14,7 +14,6 @@ import java.io.InputStream;
 public class FileUtils {
 
     public static void writeToFile(InputStream inputStream, File outFile) {
-
         if (outFile == null) return;
         FileOutputStream fileOutputStream = null;
         try {
