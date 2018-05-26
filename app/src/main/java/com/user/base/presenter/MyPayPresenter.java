@@ -1,6 +1,8 @@
 package com.user.base.presenter;
 
-public class MyPayPresenter extends BasePresenter<MyPayView>{
+import com.user.base.base.BasePresenter;
+
+public class MyPayPresenter extends BasePresenter<MyPayView> {
 
 
 

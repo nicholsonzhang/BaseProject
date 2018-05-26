@@ -2,18 +2,14 @@ package com.user.base.modules.mine;
 
 import android.content.Intent;
 
-import com.user.base.AppBaseActivity;
 import com.user.base.AppBaseFragment;
-import com.user.base.base.BaseFragment;
 import com.user.base.R;
 import com.user.base.mine.CustomizedCalendarActivity;
 import com.user.base.mine.CustomizedDatePickerActivity;
 import com.user.base.mine.GoogleCalendarActivity;
 import com.user.base.mine.TestFragmentActivity;
 
-import butterknife.BindView;
 import butterknife.OnClick;
-import retrofit2.http.Query;
 
 /**
  * Created by user on 2017/8/2.

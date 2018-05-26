@@ -1,4 +1,4 @@
-package com.user.base.presenter;
+package com.user.base.base;
 
 
 public class BasePresenter<V extends BaseView> {

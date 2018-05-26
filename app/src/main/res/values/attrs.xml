@@ -40,4 +40,10 @@
 
         <attr name="leftDrawableWidth" format="dimension"/>
     </declare-styleable>
+
+
+    <declare-styleable name="ClearEditText">
+        <attr name="clearIconHeight" format="dimension"/>
+        <attr name="clearIconWidth" format="dimension"/>
+    </declare-styleable>
 </resources>
