@@ -29,7 +29,7 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_test_recycler_view, parent, false));
+        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_test_recycler_view, parent,false));
     }
 
     @Override
