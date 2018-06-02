@@ -35,13 +35,13 @@
             android:layout_marginTop="20dp"
             android:text="显示升级dialog" />
 
-        <com.user.base.widget.ClearEditText
+        <com.base.ui.ClearEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="请输入文案" />
 
-        <com.user.base.widget.ClearEditText
+        <com.base.ui.ClearEditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

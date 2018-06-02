@@ -1,4 +1,4 @@
-package com.user.base.widget;
+package com.base.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,7 +11,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.user.base.R;
 
 
 public class ClearEditText extends android.support.v7.widget.AppCompatEditText implements View.OnTouchListener, View.OnFocusChangeListener, TextWatcher {
