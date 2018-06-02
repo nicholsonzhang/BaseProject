@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--在申请仅退款中的加减数量-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_subtract_btn" />
+
+    <TextView
+        android:id="@+id/current"
+        style="@style/text_17_484848"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="1" />
+
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add_btn" />
+
+
+</LinearLayout>
