@@ -8,5 +8,5 @@
     <color name="divider_line">#e5e5e5</color>
     <color name="color_gray">#aaa</color>
     <color name="province_line_border">#FC6C24</color>
-
+    <color name="transparent">#00000000</color>
 </resources>

@@ -19,10 +19,11 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-
-
-
-
+    <style name="Simple_Dialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 
 
 </resources>

@@ -1,6 +1,7 @@
 package com.base.library.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
 /**
@@ -9,14 +10,14 @@ import android.util.DisplayMetrics;
 
 public class DeviceUtils {
 
-    public static int dp2px(Context context, float dp) {
-        float density = context.getResources().getDisplayMetrics().density;
-        return (int) (dp * density + 0.5f);
+
+    public static final float DENSITY = Resources.getSystem().getDisplayMetrics().density;
+    public static int dp2px(float dp) {
+        return (int) (dp * DENSITY + 0.5f);
     }
 
-    public static int px2dp(Context context, float px) {
-        float density = context.getResources().getDisplayMetrics().density;
-        return (int) (px / density + 0.5f);
+    public static int px2dp(float px) {
+        return (int) (px / DENSITY + 0.5f);
     }
 
     public static int px2sp(Context context, float px) {

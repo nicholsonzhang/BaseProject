@@ -24,7 +24,7 @@ public class GlideRoundTransform extends BitmapTransformation {
     private int radius;
 
     public GlideRoundTransform(Context context) {
-        radius = DeviceUtils.dp2px(context, 5);
+        radius = DeviceUtils.dp2px(5);
     }
 
     @Override
