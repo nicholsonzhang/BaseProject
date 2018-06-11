@@ -33,7 +33,7 @@ public class TestRecyclerViewActivity extends AppBaseActivity {
         initHeaderView();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        MarginItemDecoration itemDecoration = new MarginItemDecoration(0, 0, 0, DeviceUtils.dp2px(this, 10));
+        MarginItemDecoration itemDecoration = new MarginItemDecoration(0, 0, 0, DeviceUtils.dp2px(10));
         mRecyclerView.addItemDecoration(itemDecoration);
         mRecyclerView.setAdapter(mAdapter);
 

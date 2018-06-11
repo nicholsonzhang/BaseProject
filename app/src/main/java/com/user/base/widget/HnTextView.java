@@ -85,8 +85,8 @@ public class HnTextView extends RelativeLayout {
     public HnTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mContext = context;
-        defaultTextSize = DeviceUtils.dp2px(mContext,17);
-        defaultMargin = DeviceUtils.dp2px(mContext,10);
+        defaultTextSize = DeviceUtils.dp2px(17);
+        defaultMargin = DeviceUtils.dp2px(10);
         initAttr(attrs);
         initView();
     }
@@ -110,7 +110,7 @@ public class HnTextView extends RelativeLayout {
         mCenterTextColor = a.getColor(R.styleable.HnTextView_centerTextColor,defaultTextColor);
 
         mDividerLineColor = a.getColor(R.styleable.HnTextView_dividerLineColor,defaultDividerLineColor);
-        mDividerLineHeight = a.getDimensionPixelSize(R.styleable.HnTextView_dividerLineHeight,DeviceUtils.dp2px(mContext,0.5f));
+        mDividerLineHeight = a.getDimensionPixelSize(R.styleable.HnTextView_dividerLineHeight,DeviceUtils.dp2px(0.5f));
         mDividerLineType = a.getInt(R.styleable.HnTextView_dividerLineType,defaultDividerLineType);
 
         mLeftIconHeight = a.getDimensionPixelSize(R.styleable.HnTextView_leftIconHeight,0);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.user.base">
+          package="com.user.base">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
 
     <application
         android:name=".MyApplication"
@@ -16,49 +16,52 @@
         <activity
             android:name=".modules.main.MainActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:screenOrientation="portrait"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+
+        <activity android:name=".modules.main.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".mine.CustomizedCalendarActivity" />
-        <activity android:name=".mine.GoogleCalendarActivity" />
-        <activity android:name=".news.QRCodeActivity" />
-        <activity android:name=".mine.TestFragmentActivity" />
-        <activity android:name=".mine.CustomizedDatePickerActivity" />
-        <activity android:name=".modules.mine.TestEditTextActivity" />
+        <activity android:name=".mine.CustomizedCalendarActivity"/>
+        <activity android:name=".mine.GoogleCalendarActivity"/>
+        <activity android:name=".news.QRCodeActivity"/>
+        <activity android:name=".mine.TestFragmentActivity"/>
+        <activity android:name=".mine.CustomizedDatePickerActivity"/>
+        <activity android:name=".modules.mine.TestEditTextActivity"/>
         <activity
             android:name=".modules.mine.TestComponentActivity"
-            android:theme="@style/CustomStyle"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomStyle">
 
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
 
-                <data android:scheme="nichol" />
+                <data android:scheme="nichol"/>
 
             </intent-filter>
         </activity>
-        <activity android:name=".modules.mine.TestRecyclerViewActivity" />
-        <activity android:name=".modules.mine.TestWebViewActivity" />
-        <activity android:name=".modules.mine.TestPayActivity" />
+        <activity android:name=".modules.mine.TestRecyclerViewActivity"/>
+        <activity android:name=".modules.mine.TestWebViewActivity"/>
+        <activity android:name=".modules.mine.TestPayActivity"/>
         <activity android:name=".modules.mine.TestWheelViewActivity"/>
         <activity
             android:name=".wxapi.WXPayEntryActivity"
             android:exported="true"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.user.base.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"/>
 
 
