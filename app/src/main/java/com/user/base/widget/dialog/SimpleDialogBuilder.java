@@ -1,6 +1,9 @@
-package com.user.base.widget;
+package com.user.base.widget.dialog;
 
 import android.content.Context;
+import android.text.Layout;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
 
 import com.user.base.R;
 import com.user.base.utils.TextUtils;
@@ -13,9 +16,11 @@ public class SimpleDialogBuilder<T extends SimpleDialogBuilder> {
 
     protected String mMessage;
     protected SimpleDialog mDialog;
-
+    protected LayoutInflater mInflater;
+    protected LinearLayout mRootView;
     public SimpleDialogBuilder(Context context) {
         mContext = context;
+        mInflater = LayoutInflater.from(context);
     }
 
 
@@ -35,6 +40,7 @@ public class SimpleDialogBuilder<T extends SimpleDialogBuilder> {
     public SimpleDialog create() {
         mDialog = new SimpleDialog(mContext, R.style.Simple_Dialog);
         //TODO
+
 
 
 

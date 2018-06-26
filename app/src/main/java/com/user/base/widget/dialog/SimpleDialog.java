@@ -1,4 +1,4 @@
-package com.user.base.widget;
+package com.user.base.widget.dialog;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

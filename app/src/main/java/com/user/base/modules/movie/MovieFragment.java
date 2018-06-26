@@ -1,6 +1,8 @@
 package com.user.base.modules.movie;
 
 
+import android.graphics.Typeface;
+
 import com.user.base.AppBaseFragment;
 import com.user.base.R;
 

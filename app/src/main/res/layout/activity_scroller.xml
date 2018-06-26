@@ -14,6 +14,7 @@
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这里面有个内容"/>
+        android:text="这里面有个内容"
+       />
 
 </LinearLayout>

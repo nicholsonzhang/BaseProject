@@ -12,5 +12,7 @@ public class SplashActivity extends AppBaseActivity{
     protected void initViews() {
 
 
+
+
     }
 }

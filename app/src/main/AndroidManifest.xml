@@ -16,14 +16,16 @@
         <activity
             android:name=".modules.main.MainActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-
-        <activity android:name=".modules.main.SplashActivity">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+
+        <activity android:name=".modules.main.SplashActivity">
+
         </activity>
         <activity android:name=".mine.CustomizedCalendarActivity"/>
         <activity android:name=".mine.GoogleCalendarActivity"/>
