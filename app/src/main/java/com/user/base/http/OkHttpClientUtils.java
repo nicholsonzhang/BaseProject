@@ -83,7 +83,6 @@ public class OkHttpClientUtils {
         builder.readTimeout(20, TimeUnit.SECONDS);
         builder.writeTimeout(20, TimeUnit.SECONDS);
         builder.retryOnConnectionFailure(true);
-
         if (cert != null) {
             setHttpsConfig(builder, cert);
         }

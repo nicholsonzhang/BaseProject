@@ -86,4 +86,10 @@ public class MineFragment extends AppBaseFragment {
         startActivity(intent);
     }
 
+    @OnClick(R.id.test_ok_http)
+    void clickokhttp(){
+        Intent intent = new Intent(getActivity(), TestOkActivity.class);
+        startActivity(intent);
+    }
+
 }

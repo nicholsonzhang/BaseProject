@@ -5,8 +5,8 @@ android {
 
     defaultConfig {
         applicationId "com.user.base"
-        minSdkVersion parent.ext.minSdkVersion
-        targetSdkVersion parent.ext.targetSdkVersion
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -30,20 +30,13 @@ android {
     }
 
     applicationVariants.all { variant ->
-        variant.outputs.each { output ->
+        variant.outputs.all { output ->
             def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.apk') && 'release'.equals(variant.buildType.name)) {
-                def apkFile = new File(outputFile.parent, "xx.apk")
-//                output.outputFile = apkFile
-            } else {
-                def fileName = outputFile.name.replace(".apk", "-version${defaultConfig.versionName}-code${defaultConfig.versionCode}.apk")
-                def apkFile = new File(outputFile.parent, fileName)
-//                output.outputFile = apkFile
-
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                outputFileName = "Base-code${variant.versionCode}-v${variant.versionName}-${variant.productFlavors[0].name}-${variant.buildType.name}.apk"
+                outputFileName = "Base-code${variant.versionCode}-v${variant.versionName}-${variant.buildType.name}.apk"
             }
-
         }
-
     }
 
 //    productFlavors {
@@ -69,7 +62,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test:runner:0.5', {

@@ -33,6 +33,7 @@
         <activity android:name=".mine.TestFragmentActivity"/>
         <activity android:name=".mine.CustomizedDatePickerActivity"/>
         <activity android:name=".modules.mine.TestEditTextActivity"/>
+        <activity android:name=".modules.mine.TestOkActivity"/>
         <activity
             android:name=".modules.mine.TestComponentActivity"
             android:screenOrientation="portrait"
