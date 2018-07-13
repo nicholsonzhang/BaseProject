@@ -17,8 +17,8 @@ public abstract class AppBaseActivity<T extends BasePresenter> extends BaseActiv
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mCompositeDisposable != null && !mCompositeDisposable.isDisposed()) {
-            mCompositeDisposable.dispose();
+        if (mCompositeDisposable != null) {
+            mCompositeDisposable.clear();
         }
     }
 }

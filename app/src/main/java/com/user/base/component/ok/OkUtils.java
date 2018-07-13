@@ -1,6 +1,7 @@
 package com.user.base.component.ok;
 
 
+import com.user.base.BuildConfig;
 import com.user.base.MyApplication;
 import com.user.base.utils.HttpsUtils;
 
@@ -20,9 +21,11 @@ public class OkUtils {
 
     private OkUtils() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        builder.addInterceptor(loggingInterceptor);
+        if (BuildConfig.DEBUG) {
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            builder.addInterceptor(loggingInterceptor);
+        }
 
         builder.readTimeout(20, TimeUnit.SECONDS);
         builder.writeTimeout(20, TimeUnit.SECONDS);
@@ -51,7 +54,7 @@ public class OkUtils {
             e.printStackTrace();
         }
         HttpsUtils.SSLParams sslParams = HttpsUtils.getSSLSocketFactory(cerStream);
-        builder.sslSocketFactory(sslParams.sslSocketFactory, sslParams.x509TrustManager);
+//        builder.sslSocketFactory(sslParams.sslSocketFactory, sslParams.x509TrustManager);
         mOkHttpClient = builder.build();
 
 
@@ -66,7 +69,7 @@ public class OkUtils {
         private static OkUtils holder = new OkUtils();
     }
 
-    public OkHttpClient getOkHttpClient() {
+    public OkHttpClient getClient() {
         return mOkHttpClient;
     }
 
