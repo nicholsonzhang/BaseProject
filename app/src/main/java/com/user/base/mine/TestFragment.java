@@ -17,7 +17,7 @@ import com.user.base.R;
  */
 
 public class TestFragment extends Fragment {
-    private static final String TAG = TestFragment.class.getName();
+    private static final String TAG = "yyzhang";
     private String mLabel;
 
     public static TestFragment newInstance(String label) {

@@ -2,7 +2,7 @@ package com.user.base.modules.mine;
 
 import android.widget.TextView;
 
-import com.base.library.ok.OkUtils;
+import com.user.base.component.ok.OkUtils;
 import com.user.base.AppBaseActivity;
 import com.user.base.R;
 
@@ -21,7 +21,7 @@ public class TestOkActivity extends AppBaseActivity {
     @Override
     protected void initViews() {
 
-        tvContent.setText(OkUtils.getInstance().test());
+
 
     }
 }
