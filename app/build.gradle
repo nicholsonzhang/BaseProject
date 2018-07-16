@@ -33,7 +33,6 @@ android {
         variant.outputs.all { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                outputFileName = "Base-code${variant.versionCode}-v${variant.versionName}-${variant.productFlavors[0].name}-${variant.buildType.name}.apk"
                 outputFileName = "Base-code${variant.versionCode}-v${variant.versionName}-${variant.buildType.name}.apk"
             }
         }
