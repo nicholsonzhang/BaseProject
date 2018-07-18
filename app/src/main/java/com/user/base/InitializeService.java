@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 public class InitializeService extends IntentService {
 
@@ -36,6 +37,8 @@ public class InitializeService extends IntentService {
     }
 
     private void performInit() {
+        Log.e("yyzhang","performInit");
+
 
     }
 }

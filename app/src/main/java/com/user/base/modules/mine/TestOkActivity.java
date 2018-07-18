@@ -8,7 +8,6 @@ import butterknife.OnClick;
 
 public class TestOkActivity extends AppBaseActivity {
 
-    private String downloadUrl="https://www.phi-go.com/download/TuiSha.apk";
 
     @Override
     protected int getContentViewId() {
@@ -22,6 +21,6 @@ public class TestOkActivity extends AppBaseActivity {
 
     @OnClick(R.id.btn_download)
     void startDownload(){
-        ZDownloadManager.getInstance().download(downloadUrl);
+//        ZDownloadManager.getInstance().download(downloadUrl);
     }
 }

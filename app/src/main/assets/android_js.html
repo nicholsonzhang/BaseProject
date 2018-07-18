@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Android与JS交互</title>
+</head>
+<body>
+
+<button type="button" onclick="callAndroid()">JS调用Android发方法(对象映射)</button>
+<button type="button" onclick="callAndroid2()" style="margin-top: 20px">JS调用Android发方法(协议拦截)</button>
+
+<script>
+    function callJS() {
+        alert("Android 调用JS的callJS方法");
+    }
+
+    function callAndroid() {
+        android.hello("js调用了android");
+
+    }
+    function callAndroid2() {
+        document.location="js://hello2?name=nichol";
+
+    }
+</script>
+</body>
+</html>
