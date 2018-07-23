@@ -81,14 +81,20 @@ public class MineFragment extends AppBaseFragment {
     }
 
     @OnClick(R.id.test_wheel_view)
-    void clickWheelView(){
+    void clickWheelView() {
         Intent intent = new Intent(getActivity(), TestWheelViewActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.test_ok_http)
-    void clickokhttp(){
+    void clickokhttp() {
         Intent intent = new Intent(getActivity(), TestOkActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.test_pull_down)
+    void clickPullDown() {
+        Intent intent = new Intent(getActivity(), TestPullDownActivity.class);
         startActivity(intent);
     }
 

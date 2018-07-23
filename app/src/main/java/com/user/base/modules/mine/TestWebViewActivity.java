@@ -62,12 +62,16 @@ public class TestWebViewActivity extends AppBaseActivity {
 
             @Override
             public boolean onJsConfirm(WebView view, String url, String message, JsResult result) {
-                return super.onJsConfirm(view, url, message, result);
+                //result.confirm();////h5中的confirm方法返回true
+                //result.cancel();//h5中的confirm方法返回false
+                return true;
             }
 
             @Override
             public boolean onJsPrompt(WebView view, String url, String message, String defaultValue, JsPromptResult result) {
-                return super.onJsPrompt(view, url, message, defaultValue, result);
+
+                result.confirm("js调用android onJsPrompt方法成功!");
+                return true;
             }
         });
 

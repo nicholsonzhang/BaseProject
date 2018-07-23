@@ -58,12 +58,14 @@
             android:layout_height="50dp"
             app:leftText="自定义RecyclerView"
             app:rightIcon="@drawable/right" />
+
         <com.user.base.widget.HnTextView
             android:id="@+id/test_web_view"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             app:leftText="自定义WebView"
             app:rightIcon="@drawable/right" />
+
         <com.user.base.widget.HnTextView
             android:id="@+id/test_pay"
             android:layout_width="match_parent"
@@ -77,11 +79,19 @@
             android:layout_height="50dp"
             app:leftText="检查WheelView"
             app:rightIcon="@drawable/right" />
+
         <com.user.base.widget.HnTextView
             android:id="@+id/test_ok_http"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             app:leftText="测试OkHttp"
+            app:rightIcon="@drawable/right" />
+
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_pull_down"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="下拉 上拉"
             app:rightIcon="@drawable/right" />
 
     </LinearLayout>

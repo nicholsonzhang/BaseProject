@@ -6,8 +6,14 @@
 </head>
 <body>
 
-<button type="button" onclick="callAndroid()">JS调用Android发方法(对象映射)</button>
-<button type="button" onclick="callAndroid2()" style="margin-top: 20px">JS调用Android发方法(协议拦截)</button>
+<button type="button" id="button1" onclick="callAndroid()">JS调用Android发方法(对象映射)</button>
+<br/>
+<button type="button" id="button2" onclick="callAndroid2()" style="margin-top: 20px">JS调用Android发方法(协议拦截)</button>
+<br/>
+
+<button type="button" id="button3" onclick="clickPrompt()" style="margin-top: 20px">测试prompt方法</button>
+<br/>
+<button type="button" id="button4" onclick="clickConfirm()" style="margin-top: 20px">测试confirm方法</button>
 
 <script>
     function callJS() {
@@ -18,8 +24,25 @@
         android.hello("js调用了android");
 
     }
+
     function callAndroid2() {
-        document.location="js://hello2?name=nichol";
+        document.location = "js://hello2?name=nichol";
+
+
+    }
+
+    function callAndroid3() {
+
+    }
+
+    function clickPrompt() {
+        var result = prompt("js://message?name=prompt");
+        alert("返回结果为:" + result);
+    }
+
+    function clickConfirm() {
+        var result = confirm("js://message?name=confirm");
+        alert("返回结果" + result);
 
     }
 </script>
