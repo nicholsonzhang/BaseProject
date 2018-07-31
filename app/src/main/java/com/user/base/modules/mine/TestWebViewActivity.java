@@ -14,6 +14,7 @@ import android.webkit.WebViewClient;
 import com.user.base.AppBaseActivity;
 import com.user.base.R;
 import com.user.base.utils.ToastUtils;
+import com.user.base.widget.dialog.ZDialogBuilder;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -29,7 +30,6 @@ public class TestWebViewActivity extends AppBaseActivity {
 
     @Override
     protected void initViews() {
-
         final WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_asset/android_js.html");
@@ -37,15 +37,15 @@ public class TestWebViewActivity extends AppBaseActivity {
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-               Uri uri =  Uri.parse(url);
-               if (uri.getScheme().equals("js")){
-                   if (uri.getAuthority().equals("hello2")){
-                       ToastUtils.show(TestWebViewActivity.this,"JS调用Android发方法(协议拦截)");
-                   }
+                Uri uri = Uri.parse(url);
+                if (uri.getScheme().equals("js")) {
+                    if (uri.getAuthority().equals("hello2")) {
+                        ToastUtils.show(TestWebViewActivity.this, "JS调用Android发方法(协议拦截)");
+                    }
 
-               }else {
-                   view.loadUrl(url);
-               }
+                } else {
+                    view.loadUrl(url);
+                }
 
                 return true;
             }
