@@ -94,5 +94,12 @@
             app:leftText="下拉 上拉"
             app:rightIcon="@drawable/right" />
 
+        <com.user.base.widget.HnTextView
+            android:id="@+id/test_kotlin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftText="检验Kotlin"
+            app:rightIcon="@drawable/right" />
+
     </LinearLayout>
 </ScrollView>

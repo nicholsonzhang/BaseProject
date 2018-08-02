@@ -98,4 +98,10 @@ public class MineFragment extends AppBaseFragment {
         startActivity(intent);
     }
 
+    @OnClick(R.id.test_kotlin)
+    void clickKotlin() {
+        Intent intent = new Intent(getActivity(), TestKotlinActivity.class);
+        startActivity(intent);
+    }
+
 }

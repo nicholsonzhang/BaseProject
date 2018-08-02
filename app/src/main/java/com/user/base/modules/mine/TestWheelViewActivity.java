@@ -1,6 +1,5 @@
 package com.user.base.modules.mine;
 
-import android.util.Log;
 import android.widget.TextView;
 
 import com.user.base.AppBaseActivity;
