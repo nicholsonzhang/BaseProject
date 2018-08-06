@@ -35,7 +35,7 @@
         <activity android:name=".modules.mine.TestEditTextActivity"/>
         <activity android:name=".modules.mine.TestOkActivity"/>
         <activity android:name=".modules.mine.TestPullDownActivity"/>
-        <activity android:name=".modules.mine.TestKotlinActivity"/>
+        <activity android:name=".modules.mine.kotlin.TestKotlinActivity"/>
         <activity
             android:name=".modules.mine.TestComponentActivity"
             android:screenOrientation="portrait">

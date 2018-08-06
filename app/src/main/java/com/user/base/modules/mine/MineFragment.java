@@ -8,6 +8,7 @@ import com.user.base.mine.CustomizedCalendarActivity;
 import com.user.base.mine.CustomizedDatePickerActivity;
 import com.user.base.mine.GoogleCalendarActivity;
 import com.user.base.mine.TestFragmentActivity;
+import com.user.base.modules.mine.kotlin.TestKotlinActivity;
 
 import butterknife.OnClick;
 
